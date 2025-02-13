@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- Cargat React -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <title>React App</title>
+</head>
+
+<body>
+
+
+    <div id="root"></div>
+
+    <!-- Si no se especifica el type de script mandara error el uso de html puro -->
+    <script type="text/babel">
+        //Babel se encarga de trasformar el codigo moderno a codigo soportado por navegadores web
+        const name = 'Manuel Salas'
+        const h1Tag = <h1>Hola {name}, gusto saber que estas aprendiendo REACT </h1>;
+
+        const divRoot = document.querySelector("#root");
+
+        ReactDOM.render(h1Tag, divRoot)
+        
+        //React nno depende de Babel ya que JSX ya lo hace por si solo.
+        //Nada mas se usara babel cuando se quieren usar archivos js en react.
+        
+    </script>
+</body>
+
+</html>
